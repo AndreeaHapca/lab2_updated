@@ -9,6 +9,7 @@ namespace Hapca_Andreea_Lab2.Data
 {
     public class Hapca_Andreea_Lab2Context : DbContext
     {
+
         public Hapca_Andreea_Lab2Context (DbContextOptions<Hapca_Andreea_Lab2Context> options)
             : base(options)
         {
