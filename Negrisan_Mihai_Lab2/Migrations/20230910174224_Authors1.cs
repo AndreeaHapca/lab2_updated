@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Negrisan_Mihai_Lab2.Migrations
+namespace Hapca_Andreea_Lab2.Migrations
 {
     public partial class Authors1 : Migration
     {

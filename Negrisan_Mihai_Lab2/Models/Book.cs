@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Policy;
 
-namespace Negrisan_Mihai_Lab2.Models;
+namespace Hapca_Andreea_Lab2.Models;
 
 public class Book
 {

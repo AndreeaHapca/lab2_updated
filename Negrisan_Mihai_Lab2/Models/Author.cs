@@ -1,10 +1,20 @@
-﻿namespace Negrisan_Mihai_Lab2.Models;
+﻿namespace Hapca_Andreea_Lab2.Models;
 
 public class Author
 {
+    private string authorName;
     public int ID { get; set; }
 
     public string? FirstName { get; set; }
 
     public string? LastName { get; set; }
+
+    public string AuthorName
+    {
+        get
+        {
+            return $"{FirstName} {LastName}";
+        }
+    }
+
 }

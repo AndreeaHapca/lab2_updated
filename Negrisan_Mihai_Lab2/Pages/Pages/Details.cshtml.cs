@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Negrisan_Mihai_Lab2.Data;
-using Negrisan_Mihai_Lab2.Models;
+using Hapca_Andreea_Lab2.Data;
+using Hapca_Andreea_Lab2.Models;
 
-namespace Negrisan_Mihai_Lab2.Pages.Pages
+namespace Hapca_Andreea_Lab2.Pages.Pages
 {
     public class DetailsModel : PageModel
     {
-        private readonly Negrisan_Mihai_Lab2.Data.Negrisan_Mihai_Lab2Context _context;
+        private readonly Hapca_Andreea_Lab2.Data.Hapca_Andreea_Lab2Context _context;
 
-        public DetailsModel(Negrisan_Mihai_Lab2.Data.Negrisan_Mihai_Lab2Context context)
+        public DetailsModel(Hapca_Andreea_Lab2.Data.Hapca_Andreea_Lab2Context context)
         {
             _context = context;
         }

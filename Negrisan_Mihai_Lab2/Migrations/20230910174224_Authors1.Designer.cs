@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Negrisan_Mihai_Lab2.Data;
+using Hapca_Andreea_Lab2.Data;
 
 #nullable disable
 
-namespace Negrisan_Mihai_Lab2.Migrations
+namespace Hapca_Andreea_Lab2.Migrations
 {
-    [DbContext(typeof(Negrisan_Mihai_Lab2Context))]
+    [DbContext(typeof(Hapca_Andreea_Lab2Context))]
     [Migration("20230910174224_Authors1")]
     partial class Authors1
     {
@@ -24,7 +24,7 @@ namespace Negrisan_Mihai_Lab2.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Negrisan_Mihai_Lab2.Models.Author", b =>
+            modelBuilder.Entity("Hapca_Andreea_Lab2.Models.Author", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -43,7 +43,7 @@ namespace Negrisan_Mihai_Lab2.Migrations
                     b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("Negrisan_Mihai_Lab2.Models.Book", b =>
+            modelBuilder.Entity("Hapca_Andreea_Lab2.Models.Book", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -76,7 +76,7 @@ namespace Negrisan_Mihai_Lab2.Migrations
                     b.ToTable("Book");
                 });
 
-            modelBuilder.Entity("Negrisan_Mihai_Lab2.Models.Publisher", b =>
+            modelBuilder.Entity("Hapca_Andreea_Lab2.Models.Publisher", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -93,13 +93,13 @@ namespace Negrisan_Mihai_Lab2.Migrations
                     b.ToTable("Publisher");
                 });
 
-            modelBuilder.Entity("Negrisan_Mihai_Lab2.Models.Book", b =>
+            modelBuilder.Entity("Hapca_Andreea_Lab2.Models.Book", b =>
                 {
-                    b.HasOne("Negrisan_Mihai_Lab2.Models.Author", "Author")
+                    b.HasOne("Hapca_Andreea_Lab2.Models.Author", "Author")
                         .WithMany()
                         .HasForeignKey("AuthorID");
 
-                    b.HasOne("Negrisan_Mihai_Lab2.Models.Publisher", "Publisher")
+                    b.HasOne("Hapca_Andreea_Lab2.Models.Publisher", "Publisher")
                         .WithMany("Books")
                         .HasForeignKey("PublisherID");
 
@@ -108,7 +108,7 @@ namespace Negrisan_Mihai_Lab2.Migrations
                     b.Navigation("Publisher");
                 });
 
-            modelBuilder.Entity("Negrisan_Mihai_Lab2.Models.Publisher", b =>
+            modelBuilder.Entity("Hapca_Andreea_Lab2.Models.Publisher", b =>
                 {
                     b.Navigation("Books");
                 });

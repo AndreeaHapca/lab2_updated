@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Negrisan_Mihai_Lab2.Data;
+using Hapca_Andreea_Lab2.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<Negrisan_Mihai_Lab2Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Negrisan_Mihai_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Negrisan_Mihai_Lab2Context' not found.")));
+builder.Services.AddDbContext<Hapca_Andreea_Lab2Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Hapca_Andreea_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Hapca_Andreea_Lab2Context' not found.")));
 
 var app = builder.Build();
 

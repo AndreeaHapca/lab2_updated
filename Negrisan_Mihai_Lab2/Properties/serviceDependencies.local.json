@@ -2,7 +2,7 @@
   "dependencies": {
     "mssql1": {
       "type": "mssql.local",
-      "connectionId": "ConnectionStrings:Negrisan_Mihai_Lab2Context"
+      "connectionId": "ConnectionStrings:Hapca_Andreea_Lab2Context"
     }
   }
 }

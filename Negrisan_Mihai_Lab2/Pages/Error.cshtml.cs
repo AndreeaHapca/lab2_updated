@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Diagnostics;
 
-namespace Negrisan_Mihai_Lab2.Pages
+namespace Hapca_Andreea_Lab2.Pages
 {
   [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
   [IgnoreAntiforgeryToken]

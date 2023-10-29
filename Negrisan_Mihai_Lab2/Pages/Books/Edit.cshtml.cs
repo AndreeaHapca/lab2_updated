@@ -6,16 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Negrisan_Mihai_Lab2.Data;
-using Negrisan_Mihai_Lab2.Models;
+using Hapca_Andreea_Lab2.Data;
+using Hapca_Andreea_Lab2.Models;
 
-namespace Negrisan_Mihai_Lab2.Pages.Books
+namespace Hapca_Andreea_Lab2.Pages.Books
 {
     public class EditModel : PageModel
     {
-        private readonly Negrisan_Mihai_Lab2.Data.Negrisan_Mihai_Lab2Context _context;
+        private readonly Hapca_Andreea_Lab2.Data.Hapca_Andreea_Lab2Context _context;
 
-        public EditModel(Negrisan_Mihai_Lab2.Data.Negrisan_Mihai_Lab2Context context)
+        public EditModel(Hapca_Andreea_Lab2.Data.Hapca_Andreea_Lab2Context context)
         {
             _context = context;
         }
