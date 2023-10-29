@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using HapcaAndreea_Lab2.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Policy;
 
@@ -22,4 +23,6 @@ public class Book
 
   public int? PublisherID { get; set; }
   public Publisher? Publisher { get; set; } //navigation property
+    public ICollection<BookCategory>? BookCategories { get; set; }
+
 }

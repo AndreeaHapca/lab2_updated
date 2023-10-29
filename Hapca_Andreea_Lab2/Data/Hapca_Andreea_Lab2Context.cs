@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Hapca_Andreea_Lab2.Models;
+using HapcaAndreea_Lab2.Models;
 
 namespace Hapca_Andreea_Lab2.Data
 {
@@ -20,5 +21,7 @@ namespace Hapca_Andreea_Lab2.Data
         public DbSet<Hapca_Andreea_Lab2.Models.Publisher>? Publisher { get; set; }
 
         public DbSet<Hapca_Andreea_Lab2.Models.Author>? Authors { get; set; } = default!;
+
+        public DbSet<HapcaAndreea_Lab2.Models.Category>? Category { get; set; }
     }
 }
