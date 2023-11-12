@@ -1,20 +1,23 @@
-﻿namespace Hapca_Andreea_Lab2.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Hapca_Andreea_Lab2.Models;
 
 public class Author
 {
-    private string authorName;
     public int ID { get; set; }
 
     public string? FirstName { get; set; }
 
     public string? LastName { get; set; }
 
-    public string AuthorName
+    [Display(Name = "Full Name")]
+    public string FullName
     {
         get
         {
-            return $"{FirstName} {LastName}";
+            return FirstName + " " + LastName;
         }
     }
-
+    public ICollection<Book>? Books { get; set; }
 }
+

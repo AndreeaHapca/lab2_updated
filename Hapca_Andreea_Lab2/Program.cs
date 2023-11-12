@@ -1,12 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Hapca_Andreea_Lab2.Data;
+using Microsoft.AspNetCore.Identity;
+using HapcaAndreea_Lab2.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<Hapca_Andreea_Lab2Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Hapca_Andreea_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Hapca_Andreea_Lab2Context' not found.")));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<LibraryIdentityContext>();
 
 var app = builder.Build();
 
@@ -22,6 +27,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 

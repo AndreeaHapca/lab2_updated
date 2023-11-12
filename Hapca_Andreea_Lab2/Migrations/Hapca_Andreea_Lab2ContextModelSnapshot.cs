@@ -17,7 +17,7 @@ namespace Hapca_Andreea_Lab2.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.21")
+                .HasAnnotation("ProductVersion", "6.0.23")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -134,7 +134,7 @@ namespace Hapca_Andreea_Lab2.Migrations
             modelBuilder.Entity("Hapca_Andreea_Lab2.Models.Book", b =>
                 {
                     b.HasOne("Hapca_Andreea_Lab2.Models.Author", "Author")
-                        .WithMany()
+                        .WithMany("Books")
                         .HasForeignKey("AuthorID");
 
                     b.HasOne("Hapca_Andreea_Lab2.Models.Publisher", "Publisher")
@@ -163,6 +163,11 @@ namespace Hapca_Andreea_Lab2.Migrations
                     b.Navigation("Book");
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Hapca_Andreea_Lab2.Models.Author", b =>
+                {
+                    b.Navigation("Books");
                 });
 
             modelBuilder.Entity("Hapca_Andreea_Lab2.Models.Book", b =>

@@ -23,5 +23,9 @@ namespace Hapca_Andreea_Lab2.Data
         public DbSet<Hapca_Andreea_Lab2.Models.Author>? Authors { get; set; } = default!;
 
         public DbSet<HapcaAndreea_Lab2.Models.Category>? Category { get; set; }
+
+        public DbSet<HapcaAndreea_Lab2.Models.Member>? Member { get; set; }
+
+        public DbSet<HapcaAndreea_Lab2.Models.Borrowing>? Borrowing { get; set; }
     }
 }

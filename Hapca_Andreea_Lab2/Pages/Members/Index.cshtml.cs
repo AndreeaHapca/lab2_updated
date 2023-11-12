@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using HapcaAndreea_Lab2.Models;
 using Hapca_Andreea_Lab2.Data;
-using Hapca_Andreea_Lab2.Models;
 
-namespace Hapca_Andreea_Lab2.Pages.Pages
+namespace HapcaAndreea_Lab2.Pages.Members
 {
     public class IndexModel : PageModel
     {
@@ -19,13 +19,13 @@ namespace Hapca_Andreea_Lab2.Pages.Pages
             _context = context;
         }
 
-        public IList<Publisher> Publisher { get;set; } = default!;
+        public IList<Member> Member { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Publisher != null)
+            if (_context.Member != null)
             {
-                Publisher = await _context.Publisher.ToListAsync();
+                Member = await _context.Member.ToListAsync();
             }
         }
     }
